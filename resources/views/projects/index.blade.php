@@ -3,7 +3,7 @@
 @section('content')
     <h1>Projects</h1>
     <a href="{{ route('projects.create') }}" class="btn btn-primary mb-3">Create Project</a>
-
+    <a href="{{ route('tasks.create') }}" class="btn btn-primary mb-3">Create Task</a>
     <table class="table table-striped">
         <thead>
             <tr>

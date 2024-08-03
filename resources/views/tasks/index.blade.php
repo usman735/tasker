@@ -3,7 +3,7 @@
 @section('content')
     <h1>Tasks</h1>
     <a href="{{ route('tasks.create') }}" class="btn btn-primary mb-3">Create Task</a>
-
+    <a href="{{ route('projects.create') }}" class="btn btn-primary mb-3">Create Project</a>
     <div class="mb-3">
         <label for="project-filter" class="form-label">Filter by Project</label>
         <select id="project-filter" class="form-select">
