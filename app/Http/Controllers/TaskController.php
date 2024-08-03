@@ -8,10 +8,13 @@ use Illuminate\Http\Request;
 
 class TaskController extends Controller
 {
-    public function index()
+    public function index(Request $request)
     {
         $projects = Project::with('tasks')->get();
         $tasks = Task::orderBy('priority')->with('project')->get();
+        if ($request->has('project') && $request->project != '') {
+            $tasks = Task::orderBy('priority')->with('project')->where('project_id',$request->project)->get();
+        }
         return view('tasks.index', compact('tasks', 'projects'));
     }
 
